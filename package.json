@@ -16,7 +16,7 @@
     }
   },
   "files": [
-    "dest"
+    "dist"
   ],
   "publishConfig": {
     "access": "public"
