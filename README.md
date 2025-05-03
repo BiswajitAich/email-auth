@@ -26,7 +26,7 @@ EMAIL_USER=your-email@gmail.com
 EMAIL_PASS=your-email-app-password 
 ```
 
-### Basic Usage
+### Basic Usage in NextJs api route:
 
 ```typescript
 import { generateOtp, sendEmail, storeHashedOtp, verifyOtp, hashOtp } from 'email-auth';
