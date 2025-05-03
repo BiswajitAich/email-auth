@@ -1,0 +1,12 @@
+node_modules/
+
+dist/
+.rollup.cache/
+
+.env*
+*.log
+
+*.tsbuildinfo
+
+.vscode/
+.npmignore
