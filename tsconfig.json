@@ -13,7 +13,8 @@
     "forceConsistentCasingInFileNames": true,
     "emitDeclarationOnly": false,
     "strict": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "importHelpers": true,
   },
   "include": [
     "src/**/*"
