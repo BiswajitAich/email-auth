@@ -1,6 +1,6 @@
 {
   "name": "@biswajitaich/email-auth",
-  "version": "1.0.4",
+  "version": "1.0.7",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/index.d.ts",
@@ -37,12 +37,13 @@
   "author": "Biswajit Aich",
   "license": "ISC",
   "description": "EMAIL verification system using nodemailer with typescript for type safe.",
+  "peerDependencies": {
+    "nodemailer": "^6"
+  },
   "dependencies": {
     "dotenv": "^16.5.0",
-    "nodemailer": "^6.10.1",
     "redis": "^5.5.5",
-    "tslib": "^2.8.1",
-    "typescript": "^5.8.3"
+    "tslib": "^2.8.1"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^28.0.3",
@@ -53,6 +54,7 @@
     "@types/node": "^22.15.3",
     "@types/nodemailer": "^6.4.17",
     "rollup-plugin-dts": "^6.2.1",
-    "rollup-plugin-peer-deps-external": "^2.2.4"
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "typescript": "^5.8.3"
   }
 }
