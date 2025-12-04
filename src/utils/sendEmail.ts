@@ -1,18 +1,21 @@
-import nodemailer from 'nodemailer';
+// import nodemailer from 'nodemailer';
 import dotenv from 'dotenv';
+import { Resend } from 'resend';
 dotenv.config();
 
 export const sendEmail = async (to: string, otp: string, from: string="Email Authentication"): Promise<void> => {
-    const transporter = nodemailer.createTransport({
-        service: 'gmail',
-        auth: {
-            user: process.env.EMAIL_USER!,
-            pass: process.env.EMAIL_PASS!,
-        },
-    });
+    const resend = new Resend(process.env.RESEND_API_KEY);
+
+    // const transporter = nodemailer.createTransport({
+    //     service: 'gmail',
+    //     auth: {
+    //         user: process.env.EMAIL_USER!,
+    //         pass: process.env.EMAIL_PASS!,
+    //     },
+    // });
 
     const mailOptions = {
-        from: `"${from}" <${process.env.EMAIL_USER}>`,
+        from: `${process.env.EMAIL_USER}`,
         to,
         subject: 'Your OTP Code',
         html: `
@@ -26,5 +29,7 @@ export const sendEmail = async (to: string, otp: string, from: string="Email Aut
         text: `Your OTP is ${otp}. It will expire in 5 minutes.`,
     };
 
-    await transporter.sendMail(mailOptions);
+    await resend.emails.send(mailOptions)
+
+    // await transporter.sendMail(mailOptions);
 }

@@ -1,6 +1,6 @@
 {
   "name": "@biswajitaich/email-auth",
-  "version": "1.0.8",
+  "version": "2.0.0",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/index.d.ts",
@@ -38,7 +38,7 @@
   "license": "ISC",
   "description": "EMAIL verification system using nodemailer with typescript for type safe.",
   "peerDependencies": {
-    "nodemailer": "^6"
+    "resend": "^6.5.2"
   },
   "dependencies": {
     "dotenv": "^16.5.0",
